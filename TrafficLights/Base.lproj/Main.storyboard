@@ -27,25 +27,28 @@
                                     <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="35"/>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="startButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Mw-a7-QyF"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="2gj-sj-G7h">
                                 <rect key="frame" x="124" y="74" width="166" height="537.5"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UjY-y5-pBQ">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UjY-y5-pBQ" userLabel="RedView">
                                         <rect key="frame" x="0.0" y="0.0" width="166" height="166"/>
                                         <color key="backgroundColor" systemColor="systemRedColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="UjY-y5-pBQ" secondAttribute="height" multiplier="1:1" id="1Am-DF-d1u"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4j2-n9-LM0">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4j2-n9-LM0" userLabel="YellowView">
                                         <rect key="frame" x="0.0" y="186" width="166" height="165.5"/>
                                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="4j2-n9-LM0" secondAttribute="height" multiplier="1:1" id="DMS-zn-bbi"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5gq-iX-8Sp">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5gq-iX-8Sp" userLabel="GreenView">
                                         <rect key="frame" x="0.0" y="371.5" width="166" height="166"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                                         <constraints>
@@ -65,6 +68,12 @@
                             <constraint firstItem="2gj-sj-G7h" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.6" id="m1c-bT-2bL"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="greenView" destination="5gq-iX-8Sp" id="cYG-bv-oX2"/>
+                        <outlet property="redView" destination="UjY-y5-pBQ" id="wz2-U9-OEN"/>
+                        <outlet property="startButton" destination="o6O-p5-T13" id="AXb-Da-ZeT"/>
+                        <outlet property="yellowView" destination="4j2-n9-LM0" id="dMO-22-jbb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

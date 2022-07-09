@@ -13,13 +13,19 @@ class ViewController: UIViewController {
     @IBOutlet var greenView: UIView!
     @IBOutlet var startButton: UIButton!
     
-    var lightIndex = 0
+    private var lightIndex = 0
+    private let lightOn: CGFloat = 1.0
+    private let lightOff: CGFloat = 0.3
+    
     
     override func viewDidLoad() {
-         super .viewDidLoad()
-        redView.alpha = 0.3
-        yellowView.alpha = 0.3
-        greenView.alpha = 0.3
+        super .viewDidLoad()
+        
+        startButton.layer.cornerRadius = 10
+        
+        redView.alpha = lightOff
+        yellowView.alpha = lightOff
+        greenView.alpha = lightOff
     }
     
     override func viewWillLayoutSubviews() {
@@ -36,9 +42,9 @@ class ViewController: UIViewController {
         
         for index in 0...lights.count - 1 {
             if index == lightIndex {
-                lights[index]?.alpha = 1
+                lights[index]?.alpha = lightOn
             } else {
-                lights[index]?.alpha = 0.3
+                lights[index]?.alpha = lightOff
             }
         }
         
